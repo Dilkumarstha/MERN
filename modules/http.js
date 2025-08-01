@@ -21,6 +21,7 @@
 import http from "http";
 const app = http.createServer((req,res)=>{
   console.log(req.method)
+  if(req.method == "GET"){
 
   const data = {
     name:"dilan",
@@ -29,6 +30,16 @@ const app = http.createServer((req,res)=>{
   }
   res.writeHead(200,{"content-type":"application/json"})
   res.end(JSON.stringify(data));
+}
+else if (req.method == "POST"){
+  
+  res.writeHead(200,{"content-type":"text/plain"});
+  res.end("Data sucessfully created");
+}
+else {
+  res
+  res.end("bad gate way");
+}
 })
 
 app.listen(5000)
