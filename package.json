@@ -14,9 +14,9 @@
     "url": "node ./modules/url.js",
     "server": "nodemon ./modules/server.js",
     "client": "node ./modules/client",
-    "callback":"node ./async/callback.js",
-    "await":"node ./async/await.js",
-    "promises":"node ./async/promises.js"
+    "callback": "node ./async/callback.js",
+    "await": "node ./async/await.js",
+    "promises": "node ./async/promises.js"
   },
   "keywords": [
     "MERN",
