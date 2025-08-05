@@ -1,6 +1,4 @@
-
-
-// simple demonstration for creting server and route within the express.
+//#   simple demonstration for creting server and route within the express.
 
 // import express from "express";
 // const app = express();
@@ -8,24 +6,18 @@
 //   res.send("server has ended");
 // })
 
-
 // app.listen(5000);
-
-
-
-
 
 // *******************************************************************************************************************************
 
-// creating server and route with the help of the express (level : 1)
- 
+// # creating server and route with the help of the express (level : 1)
+
 // import express from "express";
 // import fs from "fs";
 // import dotenv from "dotenv";
-// dotenv.config(); 
+// dotenv.config();
 
 // import config from "./config/config.js";
-
 
 // const AUTHOR = process.env.author;
 // const app = express();
@@ -53,9 +45,7 @@
 
 // app.listen(config.PORT);
 
-
-
-
+//  #    practise 2 **************************************************************************************
 
 // import express from "express";
 // import fs from "fs";
@@ -77,18 +67,37 @@
 //   console.log(`🚀 Server is running on port ${config.PORT}`);
 // });
 
+// #         prctise 3 : simple route  **************************************************************************************
+
+// import express from "express";
+// // import dotenv from "dotenv";
+// // dotenv.config();
+// import config from "./config/config.js";
+// console.log("port  : "  +  config.PORT)
+// console.log(config.AUTHOR)
+
+// const app = express();
+// app.get("/",(req,res)=>{
+//   // res.send("server has ens");
+//   res.json({
+//     name:"dilan",
+//     age:23
+//   })
+// });
+// app.listen(config.PORT,()=>{
+//   console.log(`server is running at port : ${config.PORT}`)
+// });
+
+// #      prctise 4 : Advance ROUTE **************************************************************************************
+
+
+
 import express from "express";
-// import dotenv from "dotenv";
-// dotenv.config();
+import routeProducts from "./routes/productRoute.js";
 import config from "./config/config.js";
-console.log("port  : "  +  config.AUTHOR)
-console.log(config.PORT)
-
-
 const app = express();
-app.get("/",(req,res)=>{
-  res.send("server has ens");
-});
+
+app.use("/",routeProducts);
+
+
 app.listen(config.PORT);
-
-
