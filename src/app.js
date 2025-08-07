@@ -45,7 +45,7 @@
 
 // app.listen(config.PORT);
 
-//  #    practise 2 **************************************************************************************
+//  #    practise 2  introducting dotenv**************************************************************************************
 
 // import express from "express";
 // import fs from "fs";
@@ -88,16 +88,19 @@
 //   console.log(`server is running at port : ${config.PORT}`)
 // });
 
-// #      prctise 4 : Advance ROUTE **************************************************************************************
-
-
+// #      prctise 4 : Advance ROUTE and final practise **************************************************************************************
 
 import express from "express";
-import routeProducts from "./routes/productRoute.js";
+import productRoute from "./routes/productRoute.js";
+import todoRoute from "./routes/todoRoute.js";
 import config from "./config/config.js";
+import todosRoute from "./routes/todosRoute.js";
 const app = express();
 
-app.use("/",routeProducts);
+app.use("/", productRoute);
+app.use("/", todoRoute);
+app.use("/", todosRoute);
 
-
-app.listen(config.PORT);
+app.listen(config.PORT, () => {
+  console.log(`Server is running at port at : ${config.PORT}`);
+});

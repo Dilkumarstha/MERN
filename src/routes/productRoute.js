@@ -1,25 +1,16 @@
 import express from "express";
 import fs from "fs";
+import productController from "../controllers/productController.js";
 const router = express.Router();
 
-router.get("/", (req, res) => {
-  res.send("<h1>HOME PAGE</h1>");
-});
+router.get("/", productController.home);
 
-router.get("/contact", (req, res) => {
-  res.send("<h1>CONTACT PAGE</h1>");
-});
+router.get("/contact/:id", productController.contact);
 
-// reading data from the products.json and filtering the items whose price is less than 200
+router.get("/product", productController.product);
 
-
-function filterData(data){
-    const products = JSON.parse(data);
-  return  products.filter((data) => data.price < 200);
-}
-router.get("/product/filter", (req, res) => {
-  const rawData = fs.readFileSync("./src/data/products.json", "utf8");
-  const filterProducts = filterData(rawData)
-  res.json(filterProducts);
-});
+router.get("/findProduct/:id", productController.findProductById);
 export default router;
+
+
+
