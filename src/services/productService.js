@@ -8,8 +8,18 @@ const productData = () => {
   return filteredData;
 };
 
-const findProductById = (id) => {
- const foundProduct =  product.find((value)=>value.id == id);
+const findProductById = (query) => {
+  // console.log(query.name)
+  console.log(product.name);
+  const foundProduct = product.filter((value) => value.name == query.name);
   return foundProduct;
+
+  // console.log(query);
 };
-export default { productData, findProductById };
+
+const createData = (data)=>{
+ console.log(data)
+ return data;
+
+}
+export default { productData, findProductById,createData };

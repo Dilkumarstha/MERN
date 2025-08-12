@@ -9,7 +9,11 @@ router.get("/contact/:id", productController.contact);
 
 router.get("/product", productController.product);
 
-router.get("/findProduct/:id", productController.findProductById);
+router.get("/product/findProduct", productController.findProductById);
+
+
+router.get("/product/createData",productController.createData);
+
 export default router;
 
 

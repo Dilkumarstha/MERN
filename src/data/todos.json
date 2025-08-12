@@ -3,7 +3,14 @@
   { "id": 2, "title": "Read a book", "completed": true },
   { "id": 2, "title": "Read a docs", "completed": true },
   { "id": 2, "title": "Read a note", "completed": true },
+  { "id": 2, "title": "Read a note", "completed": true },
+  { "id": 2, "title": "Read a note", "completed": false },
+  
 
-  { "id": 3, "title": "Do yoga", "completed": true },
-  { "id": 4, "title": "Clean room", "completed": false }
+  { "id": 3, "title": "Do yoga", "completed": false },
+  { "id": 3, "title": "Do sex", "completed": false },
+  { "id": 4, "title": "Clean room", "completed": false },
+  { "id": 4, "title": "Clean other room", "completed": true }
 ]
+
+

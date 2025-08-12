@@ -16,9 +16,19 @@ const product = (req, res) => {
 
 
 const findProductById = (req, res) => {
-  const id = req.params.id;
-  
-const product = productService.findProductById(id);
+  // const id = req.params.id;
+  // console.log(id);
+  const query = req.query;
+  console.log(query);
+const product = productService.findProductById(query);
   res.json(product);
 };
-export default { home, contact, product, findProductById };
+
+
+const createData= (req,res)=>{
+  console.log(req.body)
+  const data = productService.createData(req.body);
+res.json(data)
+// res.send("dilan")
+};
+export default { home, contact, product, findProductById,createData };

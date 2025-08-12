@@ -91,15 +91,19 @@
 // #      prctise 4 : Advance ROUTE and final practise **************************************************************************************
 
 import express from "express";
-import productRoute from "./routes/productRoute.js";
-import todoRoute from "./routes/todoRoute.js";
 import config from "./config/config.js";
-import todosRoute from "./routes/todosRoute.js";
-const app = express();
 
+import bodyParser from "body-parser";
+
+import productRoute from "./routes/productRoute.js";
+import todosRoute from "./routes/todosRoute.js";
+
+const app = express();
+app.use(express.json());
 app.use("/", productRoute);
-app.use("/", todoRoute);
-app.use("/", todosRoute);
+
+app.use(bodyParser.json())
+app.use("/",todosRoute);
 
 app.listen(config.PORT, () => {
   console.log(`Server is running at port at : ${config.PORT}`);

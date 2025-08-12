@@ -1,38 +1,18 @@
 import fs from "fs";
-const task = JSON.parse(fs.readFile("./src/data/todos.json","utf-8"));
-
-const todosFilter = (id)=>{
-    const filterById = task.filter((value)=>value.id === id);
-   
-if(filterById.length == 0){
-
-    return {
-        status:404,
-        message : "Task not found!"
-    }
-}
-else{
- 
-    if(filterById.every((value)=>value.completed === true)){
-   
-        return {
-            status : 200,
-            message :filterById
-        }
+const data = JSON.parse(fs.readFileSync("./src/data/todos.json"));
+const todosFilter = (id) => {
+  const checkId = data.filter((todos) => todos.id == id);
+  if (checkId.length == 0) {
+    return `task is not found by id : ${id}`;
+  } else {
+    const todosCompleted = checkId.filter((value) => value.completed == true);
+    if(todosCompleted.length == 0){
+return "task not completed !";
     }
     else {
-        return {
-            status:403,
-            message:"task is not complete yet!"
-        }
+        return todosCompleted;
     }
- 
-}
+  }
+};
 
-  
-}
-
-const result = todosFilter(20);
-console.log(result);
-
-export default {todosFilter};
+export default { todosFilter };

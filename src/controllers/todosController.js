@@ -1,10 +1,22 @@
-
+import productService from "../services/productService.js";
 import todosService from "../services/todosService.js";
-const todosFilter = (req,res)=>{
+const toddosFilter = (req,res)=>{
     const id = req.params.id;
-    const todo = todosService.todosFilter(id);
+    res.json(todosService.todosFilter(id));
    
-    res.status(todo.status).json(todo.message);
+   
+}
+const todoQuery = (req,res)=>{
+    const query = req.query;
+    console.log(query)
+    res.send(query);
 }
 
-export default {todosFilter};
+
+const todoBody = (req,res)=>{
+    res.send(req.body)
+    console.log(req.body)
+}
+
+
+export default {toddosFilter,todoQuery,todoBody};
