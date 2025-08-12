@@ -80,4 +80,3 @@ root/
     - utils/
         - jwtAuth.js
 # MERN
-hahah
