@@ -18,5 +18,10 @@ const todoBody = (req,res)=>{
     console.log(req.body)
 }
 
+const createData = (req,res)=>{
+const data = req.body;
+const createData = todosService.createData;
+res.json(createData);
+}
 
-export default {toddosFilter,todoQuery,todoBody};
+export default {toddosFilter,todoQuery,todoBody,createData};

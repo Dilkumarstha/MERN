@@ -3,18 +3,16 @@ import fs from "fs";
 import productController from "../controllers/productController.js";
 const router = express.Router();
 
-router.get("/", productController.home);
+router.get("/", productController.getProduct);
 
-router.get("/contact/:id", productController.contact);
+router.get("/getProduct/Id/:id", productController.getProductById);
 
-router.get("/product", productController.product);
+router.get("/getProduct/Query",productController.getProductByQuery);
 
-router.get("/product/findProduct", productController.findProductById);
+router.post("/createData", productController.createData);
 
+router.put("/updateData", productController.updateData);
 
-router.get("/product/createData",productController.createData);
+router.delete("/deleteData",productController.deleteData);
 
 export default router;
-
-
-

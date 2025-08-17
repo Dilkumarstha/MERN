@@ -92,19 +92,26 @@
 
 import express from "express";
 import config from "./config/config.js";
-
+import connectDB from "./config/database.js";
 import bodyParser from "body-parser";
 
 import productRoute from "./routes/productRoute.js";
 import todosRoute from "./routes/todosRoute.js";
 
-const app = express();
-app.use(express.json());
-app.use("/", productRoute);
 
-app.use(bodyParser.json())
-app.use("/",todosRoute);
+const app = express();
+app.use(bodyParser.json());
+app.use(express.json()); //body-parser.
+
+connectDB(); //connecting database
+
+app.use("/product", productRoute);
+
+app.use("/todos", todosRoute);
 
 app.listen(config.PORT, () => {
   console.log(`Server is running at port at : ${config.PORT}`);
 });
+
+
+
