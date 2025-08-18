@@ -1,5 +1,6 @@
 import fs from "fs";
 import model from "../models/Todos.js";
+
 const data = JSON.parse(fs.readFileSync("./src/data/todos.json"));
 const todosFilter = (id) => {
   const checkId = data.filter((todos) => todos.id == id);
@@ -15,8 +16,9 @@ const todosFilter = (id) => {
   }
 };
 
-const createData = (data)=>{
-model.create(data);
+const createData =async (data)=>{
+const createdData =await model.create(data);
+return createdData;
 }
 
-export default { todosFilter };
+export default { todosFilter,createData };

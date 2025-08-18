@@ -21,8 +21,8 @@ const getProductByQuery = (req, res) => {
 
 const createData = (req, res) => {
   const body = req.body;
-  const data = productService.createData(body);
-  res.json(data);
+  const data =     productService.createData(body);
+  // res.json(data);
 // res.status(201).send("data created sucessfully") 
 };
 

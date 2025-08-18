@@ -15,15 +15,18 @@ const getProductById = (id) => {
 };
 const getProductByQuery = (query) => {
   // console.log(query.name)
-  console.log(product.name).;
+  console.log(product.name);
   const foundProduct = product.filter((value) => value.name == query.name);
   return foundProduct;
 
   // console.log(query);
 };
 
-const createData = (data) => {
-  
- const models = model.create(data);
+const createData =  (data) => {
+ const createdProduct =   model.create(data);
+//  console.log(createdProduct);
+//  
 };
-export default { getProduct, getProductById,getProductByQuery, createData };
+
+
+export default { getProduct, getProductById, getProductByQuery, createData };
