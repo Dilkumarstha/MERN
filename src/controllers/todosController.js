@@ -6,7 +6,7 @@ const toddosFilter = (req, res) => {
 };
 const todoQuery = (req, res) => {
   const query = req.query;
-  console.log(query);
+  const data = todosService.createData(query);
   res.send(query);
 };
 
@@ -15,12 +15,16 @@ const todoBody = (req, res) => {
   console.log(req.body);
 };
 
-const createData =async (req, res) => {
-  const body = req.body;
- 
-  const data =await todosService.createData(body);
-//   res.json(data);
-  res.json({message:"data created sucessfully" ,todos:  data});
+const createData = async (req, res) => {
+  try {
+    const body = req.body;
+    const data = await todosService.createData(body);
+
+    res.status(201).json({ message: "Data created successfully", todos: data});
+  } catch (error) {
+    console.error("Error in createData controller:", error);
+    res.status(500).json({ message: error.message });
+  }
 };
 
 export default { toddosFilter, todoQuery, todoBody, createData };

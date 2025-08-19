@@ -16,9 +16,9 @@ const todosFilter = (id) => {
   }
 };
 
-const createData =async (data)=>{
-const createdData =await model.create(data);
-return createdData;
-}
+const createData = async (data) => {
+  const createdData = await model.create(data);
+    return createdData;
+};
 
-export default { todosFilter,createData };
+export default { todosFilter, createData };

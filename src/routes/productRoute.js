@@ -5,14 +5,14 @@ const router = express.Router();
 
 router.get("/", productController.getProduct);
 
-router.get("/getProduct/Id/:id", productController.getProductById);
+router.get("/Id/:id", productController.getProductById);
 
-router.get("/getProduct/Query",productController.getProductByQuery);
+router.get("/Query",productController.getProductByQuery);
 
-router.post("/createData", productController.createData);
+router.post("/", productController.createData);
 
-router.put("/updateData", productController.updateData);
+router.put("/:id", productController.updateData);
 
-router.delete("/deleteData",productController.deleteData);
+router.delete("/:id",productController.deleteData);
 
 export default router;
