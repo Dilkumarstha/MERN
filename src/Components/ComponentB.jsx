@@ -1,5 +1,5 @@
 import React from 'react'
-import ComponentC from './componentC.jsx'
+import ComponentC from './ComponentC.jsx';
 import { useSelector } from 'react-redux'
 import counterSlice from '../redux/counterSlice.js';
 

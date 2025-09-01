@@ -3,9 +3,10 @@ import { decrement, increment } from "../redux/counterSlice";
 import Counter from "../redux/counter";
 import ComponentB from "./componentB";
 
-function componentA() {
+function ComponentA() {
     const dispatch = useDispatch()
-    const {count} = useSelector(state => state.counter);
+    const {count,address,name,cube} = useSelector(state => state.counter);
+
 
     function increaseCounter() {
         dispatch(increment())
@@ -18,7 +19,9 @@ function componentA() {
 
     return (
         <div>
-            <h1>componentA :{count}</h1>
+            <h1>componentA </h1>
+            <h2>count: {count}</h2>
+            <h2>cube: {cube}</h2>
          <ComponentB/>
             <button onClick={increaseCounter}>increment</button>
             <button onClick={decreaseCounter}>decrement</button>
@@ -26,4 +29,4 @@ function componentA() {
 
     )
 }
-export default componentA;
+export default ComponentA;

@@ -1,7 +1,8 @@
 .card-wrapper {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 5rem;
     justify-content: center;
     /* ❌ remove align-items: stretch */
     align-items: center;  /* ✅ cards keep natural height */
