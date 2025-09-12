@@ -1,82 +1,36 @@
-# JavaScript
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-- Programming language
-- High level, interpreted, multi-paradigm, dynamic, case-sensitive
-- Built on C++
-- Used to build frontend web pages (add interactivity)
-- Node.js used to build APIs
+## Getting Started
 
-# Node.js
+First, run the development server:
 
-- It is a JavaScript runtime.
-- Runtime: It is program that runs another program.
-- Helps to run JS in local machine, laptop, server.
-- Build using C++
-- Uses Google Chrome V8 engine for compiling
-- Used to build APIs, microservices, server side programs, CLI, Webhooks
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-## Architecture
-- Single threaded event driven architecture
-- Non-blocking I/O Operations
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## HTTP Methods
+You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-1. GET: Read, used for fetching data
-2. POST: Create, used to add/create a new data
-3. PUT: Update, used to updated existing data
-4. DELETE: Delete, used to delete a data
-5. PATCH (optional): Partial update
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## HTTP Status codes
+## Learn More
 
-1. 100 range : Informational response
-2. 200 range: Success response
-    - 200: OK
-    - 201: Created
-3. 300 range: Redirection responses
-4. 400 range: Client/User error responses
-    - 400: Bad request
-    - 401: Unauthorized
-    - 403: Forbidden
-    - 404: Not found
-    - 405: Method not allowed
-    - 409: Conflict
-    - 422: Unprocessable entity
-5. 500 range: Server error
-    - 500: Internal server error
-    - 502: Bad gateway
-    - 504: Timeout
+To learn more about Next.js, take a look at the following resources:
 
-# Sematic coding
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-1. Files and folder structure
-2. Files and folder naming
-3. Function and variable naming
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## API Folder structure
-root/
-- package.json
-- .env
-- .env.example
-- .gitignore
-- node_modules/
-- src/
-    - server.js
-    - app.js
-    - constants/
-        - roles.js
-    - controllers/
-        - userControllers.js
-    - helpers/
-        - dataFormatter.js
-    - lib/
-        - userType.js
-    - models/
-        - User.js
-    - routes/
-        - userRoutes.js
-    - services/
-        - userServices.js
-    - utils/
-        - jwtAuth.js
-# MERN
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
