@@ -1,10 +1,12 @@
-import http from "http";
+import http from 'http';
+
+const app = http.createServer((req, res) => {
+res.end('Hello World');
 
 
-const server = http.createServer((request, response) => {
-  response.end("Hello Dil Kumar");
 });
 
-server.listen(5000, () => {
-  console.log("Server running at port 5000...");
-});
+
+app.listen(5000, () => {
+    console.log('Server is running on port 5000');
+}   );

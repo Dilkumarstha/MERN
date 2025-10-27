@@ -69,18 +69,19 @@ import fs from "fs";
 
 fs.readFile("users.json", "utf8", (uError, users) => {
   if (uError) return uError;
+  console.log("users");
   console.log(users);
   fs.readFile("posts.json", "utf8", (pError, posts) => {
-    if (pError) return pError;
+    if  (pError) return pError;
+    console.log("posts");
     console.log(posts);
 
     fs.readFile("comments.json","utf8",(cError,comments)=>{
       if(cError) return cError;
+      console.log("comments");
       console.log(comments);
     })
   });
 });
-
-
 
 // here is the problem of callback hell and it can be fixed by promises : handeling the errors more perfectly

@@ -1,34 +1,15 @@
 {
-  "name": "mern_2025",
-  "version": "0.1.0",
-  "description": "Learning MERN",
-  "main": "server.js",
+  "name": "mern",
+  "version": "1.0.0",
+  "description": "- Programming language\r - High level, interpreted, multi-paradigm, dynamic, case-sensitive\r - Built on C++\r - Used to build frontend web pages (add interactivity)\r - Node.js used to build APIs",
+  "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js",
-    "fs": "node ./modules/fileSystem.js",
-    "http": "nodemon ./modules/http.js",
-    "os": "node ./modules/os.js",
-    "path": "node ./modules/path.js",
-    "url": "node ./modules/url.js",
-    "server": "nodemon ./modules/server.js",
-    "client": "node ./modules/client",
-    "callback": "node ./async/callback.js",
-    "await": "node ./async/await.js",
-    "promises": "node ./async/promises.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "MERN",
-    "E-commerce",
-    "site"
-  ],
-  "author": "Dil Kumar Shrestha",
+  "author": "Dilan Shrestha",
   "license": "ISC",
-  "devDependencies": {
-    "nodemon": "^3.1.10"
-  },
   "dependencies": {
-    "node-fetch": "^3.3.2"
+    "nodemon": "^3.1.10"
   }
 }
