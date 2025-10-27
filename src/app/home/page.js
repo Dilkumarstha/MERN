@@ -2,7 +2,7 @@ import React from 'react'
 
 const home = () => {
   return (
-    <div>this is the home route</div>
+    <div className='text-primary'>this is the home route</div>
   )
 }
 

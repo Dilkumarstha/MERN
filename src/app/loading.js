@@ -1,11 +1,9 @@
 import React from 'react'
 
-const Loading = () => {
+const LoadingPage = () => {
   return (
-    <div className="container w-full h-screen flex justify-center items-center">
-        <div>Loading.......</div>
-         </div>
+    <div>LoadingPage</div>
   )
 }
 
-export default Loading
+export default LoadingPage

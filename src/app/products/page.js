@@ -1,22 +1,19 @@
 import React from "react";
 import ProductCard from "./_components/Card";
 
-const Products = async () => {
-  const Products = await fetch("https://fakestoreapi.com/products");
-  const data = await Products.json();
+const Products = async ({ searchParams }) => {
+  const query = searchParams.saman;
 
-  console.log(data);
-  if (!data) {
-    return <h1>Loading...</h1>;
-  }
+  const product = await fetch(
+    `https://node-20250302.vercel.app/api/products?category=${query || ""}`
+  );
+  const products = await product.json();
+
   return (
-
-    <div>
-{
-  data.map((product,index) => (
-    <ProductCard key={index} product={product} />
-  ))
-}
+    <div className="flex justify-center flex-wrap gap-4 lg:gap-10 w-full">
+      {products.map((product) => (
+        <ProductCard key={product.id} product={product} />
+      ))}
     </div>
   );
 };

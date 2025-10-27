@@ -1,13 +1,16 @@
 import React from 'react'
-
-const ProducsLayout = ({children}) => {
+export const metadata = {
+  title: "Products",
+  description: "Products page for Dokan",
+  keywords: "products, shop, ecommerce",
+};
+const ProductsLayout = ({ children }) => {
   return (
-   <div className='  m-5 p-5 flex flex-col justify-center items-center'>
-    {children}
-    <h2>product related</h2>
-   </div>
-    
+    <div className='flex flex-col justify-center items-center m-5 p-5'>
+      {children}
+      <h2 className='mt-5 text-lg font-semibold'>Product related</h2>
+    </div>
   )
 }
 
-export default ProducsLayout
+export default ProductsLayout
